@@ -9,14 +9,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // SEQUELIZE CONNECTION
-const sequelize = new Sequelize(process.env.PG_URL)
+// const sequelize = new Sequelize(process.env.PG_URL)
 
-try {
-    sequelize.authenticate()
-    console.log(`Connected with Sequelize at ${process.env.PG_URL}`)
-} catch(err) {
-    console.log(`Unable to connect to PG: ${err}`)
-}
+// try {
+//     sequelize.authenticate()
+//     console.log(`Connected with Sequelize at ${process.env.PG_URL}`)
+// } catch(err) {
+//     console.log(`Unable to connect to PG: ${err}`)
+// }
 
 // ROOT
 app.get('/', (req, res) => {
